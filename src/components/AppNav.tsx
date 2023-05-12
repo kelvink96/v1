@@ -127,7 +127,7 @@ const AppNav = () => {
     const [active, setActive] = useState();
     const [drawerOpened, {toggle: toggleDrawer, close: closeDrawer}] = useDisclosure(false);
 
-    const items = links.map((link, index) => (
+    const items = links.map(link => (
         <Button
             component={Scrollchor}
             key={link.ref}
@@ -135,7 +135,6 @@ const AppNav = () => {
             className={cx(classes.link, {[classes.linkActive]: active === link.link})}
             animate={{offset: -32, duration: 600}}
         >
-            0{++index}.&nbsp;&nbsp;
             {link.label}
         </Button>
     ));
