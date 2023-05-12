@@ -27,7 +27,7 @@ const HomePage = () => {
                 <link rel="manifest" href="/site.webmanifest"/>
                 <meta property="og:title" content="Kelvin Kiprop"/>
                 <meta property="og:site_name" content="Kelvin kiprop portfolio"/>
-                <meta property="og:url" content="http://localhost:5173/#about"/>
+                <meta property="og:url" content="https://kelvinkiprop.netlify.app/"/>
                 <meta
                     property="og:description"
                     content="Kelvin Kiprop's portfolio showcases his skills as a software developer and UI/UX designer. Check out his projects to see his impressive work and get inspired."/>
@@ -41,7 +41,6 @@ const HomePage = () => {
                 <ProjectsSection id="projects" {...boxProps}/>
                 <ContactSection id="contact" {...boxProps}/>
             </Container>
-            {/*TODO: use this - https://v4.brittanychiang.com/#jobs, https://goodprofile.me/yunuserturk#experiences, https://www.taniarascia.com/me*/}
         </Wrapper>
     );
 };

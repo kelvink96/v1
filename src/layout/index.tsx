@@ -10,7 +10,8 @@ import {
     Stack,
     Text,
     Tooltip,
-    Transition
+    Transition,
+    UnstyledButton
 } from "@mantine/core";
 import {
     IconBrandBehance,
@@ -57,7 +58,7 @@ interface IProps {
 }
 
 const Wrapper = ({children}: IProps) => {
-    const {classes} = useStyles();
+    const {classes, theme} = useStyles();
 
     return (
         <Box className={classes.wrapper}>
@@ -132,7 +133,7 @@ const Wrapper = ({children}: IProps) => {
                     )}
                 </Transition>
             </Affix>
-            <Center p="md">
+            <Center py="lg">
                 <Stack align="center">
                     <Group className={classes.hiddenDesktop}>
                         <Tooltip label="Behance">
@@ -172,13 +173,29 @@ const Wrapper = ({children}: IProps) => {
                             </ActionIcon>
                         </Tooltip>
                         <Tooltip label="Twitter">
-                            <ActionIcon component="a" href="https://twitter.com/kelvink_96"
-                                        target="_blank">
+                            <ActionIcon
+                                component="a"
+                                href="https://twitter.com/kelvink_96"
+                                target="_blank"
+                            >
                                 <IconBrandTwitter/>
                             </ActionIcon>
                         </Tooltip>
                     </Group>
-                    <Text>Designed & Built by Kelvin Kiprop</Text>
+                    <UnstyledButton
+                        component="a"
+                        href="https://github.com/kelvink96/v1"
+                        target="_blank"
+                        sx={{
+                            '&:hover, &:focus': {
+                                fontWeight: 600,
+                                transition: 'all ease 150ms',
+                                color: theme.primaryColor
+                            }
+                        }}
+                    >
+                        Designed & Built by Kelvin Kiprop
+                    </UnstyledButton>
                 </Stack>
             </Center>
         </Box>

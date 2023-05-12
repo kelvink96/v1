@@ -88,7 +88,7 @@ const useStyles = createStyles((theme, {scrollPosition}: any) => ({
 
         '&:hover': {
             backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-            borderColor: theme.colors.blue[3]
+            borderColor: theme.primaryColor
         },
     },
 
